@@ -20,12 +20,14 @@
         padding: 0;
         margin: 0;
         li {
-            min-height: 48px;            
             align-items: center;
             padding-left: 20px;
             padding-top: 10px;
             padding-bottom: 10px;
-            a {
+            >a {
+                user-select: none;
+                -webkit-user-select: none;
+                cursor: pointer;
                 font-size: 14px;
                 display: flex;
                 align-items: center;
@@ -34,19 +36,55 @@
                 span {
                     margin-left: 6px;
                 }
-            }    
+                .icon-menu-close {
+                    margin-left: 10px;
+                    font-size: 9px;
+                    position: absolute;
+                    right: 50px;
+                    &.icon-down {
+                        display: none;
+                    }
+                    &.icon-up {
+                        display: block;
+                    }
+                }
+            }
+            &.close-menu {
+                >a {
+                    .icon-menu-close {
+                        &.icon-up {
+                            display: none;
+                        }
+                        &.icon-down {
+                            display: block;
+                        }
+                    }
+                }
+                .menu-child {
+                    max-height: 0;
+                }
+            }
             .menu-child {
-                margin-top: 12px;
+                overflow: hidden;
+                max-height: 500px;
+                transition: max-height 0.25s;
                 .menu-child-item {
+                    cursor: pointer;
                     padding-left: 20px;
                     padding-top: 4px;
                     padding-bottom: 4px;
+                    &:first-child {
+                        margin-top: 12px;
+                    }
                     a {
                         color: rgba(255,255,255,.8);
                         font-size: 13px;
                     }
                 }
-            }        
+            }
+            a {
+                cursor: pointer;
+            }
         }
     }
     #copy-right {

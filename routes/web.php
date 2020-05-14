@@ -26,5 +26,9 @@ Route::prefix('admin')->group(function () {
         Route::get('/add', function () {
             return view('admin.product_category.add');
         });
+
+        Route::get('/list', function () {
+            return view('admin.product_category.list');
+        });
     });
 });

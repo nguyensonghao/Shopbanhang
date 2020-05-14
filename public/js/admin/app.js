@@ -37251,6 +37251,9 @@ $(document).ready(function () {
       }
     }
   });
+  $('#left-menu li').click(function () {
+    $(this).toggleClass('close-menu');
+  });
 });
 
 /***/ }),
