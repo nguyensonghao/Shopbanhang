@@ -1,7 +1,7 @@
-.admin-pagination {
+.pagination {
     li {
-        a {
-            font-size: 13px;
+        .page-link {
+            font-size: 13px !important;
         }
     }
 }

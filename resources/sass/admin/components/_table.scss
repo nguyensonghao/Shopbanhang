@@ -4,5 +4,16 @@
     }
     tbody {
         background: white;
+        td {
+            .btn-group {
+                .btn {
+                    font-size: 12px !important;
+                    height: 28px;
+                }
+            }
+        }
+    }
+    .tb-action {
+        width: 200px;
     }
 }

@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,12 +24,10 @@ Route::get('/admin', function () {
 
 Route::prefix('admin')->group(function () {
     Route::prefix('category')->group(function () {
-        Route::get('/add', function () {
-            return view('admin.product_category.add');
-        });
-
-        Route::get('/list', function () {
-            return view('admin.product_category.list');
-        });
+        Route::get('/add', 'Admin\Category_Product_Controller@add_view');
+        Route::get('/list', 'Admin\Category_Product_Controller@list_view');
+        Route::get('/edit', 'Admin\Category_Product_Controller@edit_view');
+        Route::post('/add', 'Admin\Category_Product_Controller@add_action');
+        Route::delete('/delete/:id', 'Admin\Category_Product_Controller@delete_action');
     });
 });

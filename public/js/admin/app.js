@@ -37225,9 +37225,13 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ../bootstrap */ "./resources/js/bootstrap.js"); // Require js page
 
-__webpack_require__(/*! ./pages/category */ "./resources/js/admin/pages/category.js");
+
+__webpack_require__(/*! ./pages/category */ "./resources/js/admin/pages/category.js"); // Require js templates
+
+
+__webpack_require__(/*! ./templates/toast */ "./resources/js/admin/templates/toast.js");
 
 /***/ }),
 
@@ -37253,6 +37257,21 @@ $(document).ready(function () {
   });
   $('#left-menu li').click(function () {
     $(this).toggleClass('close-menu');
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/admin/templates/toast.js":
+/*!***********************************************!*\
+  !*** ./resources/js/admin/templates/toast.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $('.toast-message-close').click(function () {
+    $('.toast-message').hide();
   });
 });
 

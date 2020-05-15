@@ -18,10 +18,10 @@
             </a>
             <div class="menu-child">
                 <div class="menu-child-item">
-                    <a>Thêm mới</a>
+                    <a href="{{ url('/admin/category/add') }}">Thêm mới</a>
                 </div>
                 <div class="menu-child-item">
-                    <a>Danh sách</a>
+                    <a href="{{ url('/admin/category/list') }}">Danh sách</a>
                 </div>
             </div>
         </li>

@@ -9,6 +9,7 @@
         flex: 1;
         position: relative;
         #main-header {
+            position: absolute;
             height: 40px;
             .breadcrumb {
                 background: transparent;
@@ -18,9 +19,20 @@
                 line-height: 40px;
                 padding-left: 20px;
                 font-size: 14px;
-            }            
+            }
         }
         #main-body {
+            .main-body-header {
+                position: relative;
+                .main-body-search {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    input {
+                        font-size: 13px;
+                    }
+                }
+            }
             background: #eeeeee;
             position: absolute;
             bottom: 0;
