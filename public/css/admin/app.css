@@ -11257,9 +11257,36 @@ a.text-dark:focus {
   color: white !important;
 }
 
+.easy-autocomplete li {
+  border-bottom: 1px solid #eeeeee !important;
+}
+
 #list-category-product-page .category-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+#admin-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #eeeeee;
+}
+
+#admin-login-page .admin-login-container {
+  background: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+#admin-login-page .admin-login-container .alert {
+  font-size: 14px;
 }
 

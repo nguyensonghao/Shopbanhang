@@ -4,16 +4,17 @@
 
 @section('content')
     <p class="tile">Chỉnh sửa category</p>
-    <form class="admin-form" id="form-add-product-category">
+    <form class="admin-form" id="form-add-product-category" method="post" action="{{ url('admin/category/edit') }}">
         <div class="form-group">
             <label for="category-name">Tên</label>
             <input
+                value="{{ $cate->name }}"
                 type="text" class="form-control"
                 id="category-name" aria-describedby="category-name-help"
                 name="category-name" placeholder="Nhập tên category"
             >
             <small id="category-name-help"
-                   class="form-text text-muted"
+                class="form-text text-muted"
             >Tên riêng sẽ hiển thị trên trang mạng của bạn.
             </small>
         </div>
@@ -23,11 +24,10 @@
                 class="form-control" id="category-parent"
                 name="parent" aria-describedby="category-parent-help"
             >
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option value="">-- Trống --</option>
+                @foreach($list_cate as $cate)
+                    <option value="{{ $cate->id }}">{{ $cate->name }}</option>
+                @endforeach
             </select>
             <small id="category-parent-help"
                    class="form-text text-muted"
@@ -47,7 +47,7 @@
             <textarea
                 class="form-control" id="category-description"
                 name="description" placeholder="Nhập mô tả" rows="5"
-            ></textarea>
+            >{{ $cate->description }}</textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-sm">Chỉnh sửa</button>
     </form>

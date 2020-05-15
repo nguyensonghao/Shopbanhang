@@ -27,8 +27,13 @@ class Category_Product_Controller extends Controller
         return view('admin.product_category.add')->with($data);
     }
 
-    public function edit_view () {
-        return view('admin.product_category.edit');
+    public function edit_view ($id) {
+        $data = array(
+            'cate' => Category_Product::find($id),
+            'list_cate' => Category_Product::select(['name', 'id'])->get()
+        );
+
+        return view('admin.product_category.edit')->with($data);
     }
 
     public function add_action (Request $request) {
@@ -57,5 +62,16 @@ class Category_Product_Controller extends Controller
 
     public function delete_action () {
 
+    }
+
+    public function search (Request $request) {
+        $query = $request->query('query');
+        $fields = ['name', 'id'];
+        if ($query) {
+            return Category_Product::where('name', 'like', "%" . $query . "%")
+                ->select($fields)->take(10)->get();
+        }
+
+        return Category_Product::select($fields)->take(10)->get();
     }
 }
