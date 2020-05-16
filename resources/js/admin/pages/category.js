@@ -26,4 +26,8 @@ $(document).ready(function () {
             method: 'GET'
         }
     })
+
+    $('.btn-group-action .btn-delete-list').click(function () {
+        console.log('test');
+    })
 })

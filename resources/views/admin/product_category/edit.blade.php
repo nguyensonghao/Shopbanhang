@@ -25,8 +25,8 @@
                 name="parent" aria-describedby="category-parent-help"
             >
                 <option value="">-- Trống --</option>
-                @foreach($list_cate as $cate)
-                    <option value="{{ $cate->id }}">{{ $cate->name }}</option>
+                @foreach($list_cate as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
             </select>
             <small id="category-parent-help"

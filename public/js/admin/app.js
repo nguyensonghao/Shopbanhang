@@ -37268,6 +37268,9 @@ $(document).ready(function () {
       method: 'GET'
     }
   });
+  $('.btn-group-action .btn-delete-list').click(function () {
+    console.log('test');
+  });
 });
 
 /***/ }),
@@ -37339,7 +37342,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/blog/resources/js/admin/app.js */"./resources/js/admin/app.js");
+module.exports = __webpack_require__(/*! E:\HaoNguyen\Xampp7\htdocs\Shopbanhang\resources\js\admin\app.js */"./resources/js/admin/app.js");
 
 
 /***/ })

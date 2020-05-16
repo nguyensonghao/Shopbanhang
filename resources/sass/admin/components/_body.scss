@@ -24,12 +24,24 @@
         #main-body {
             .main-body-header {
                 position: relative;
-                .main-body-search {
+                .list-action-container {
                     position: absolute;
                     right: 0;
                     top: 0;
-                    input {
-                        font-size: 13px;
+                    display: flex;
+                    .btn-group-action {
+                        height: 34px;
+                        a {
+                            font-size: 14px;
+                            padding-top: 4px;
+                            padding-bottom: 4px;
+                        }
+                    }
+                    .main-body-search {
+                        margin-left: 10px;
+                        input {
+                            font-size: 13px;
+                        }
                     }
                 }
             }

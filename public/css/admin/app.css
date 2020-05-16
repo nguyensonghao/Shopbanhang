@@ -11138,13 +11138,28 @@ a.text-dark:focus {
   position: relative;
 }
 
-#body #main #main-body .main-body-header .main-body-search {
+#body #main #main-body .main-body-header .list-action-container {
   position: absolute;
   right: 0;
   top: 0;
+  display: flex;
 }
 
-#body #main #main-body .main-body-header .main-body-search input {
+#body #main #main-body .main-body-header .list-action-container .btn-group-action {
+  height: 34px;
+}
+
+#body #main #main-body .main-body-header .list-action-container .btn-group-action a {
+  font-size: 14px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#body #main #main-body .main-body-header .list-action-container .main-body-search {
+  margin-left: 10px;
+}
+
+#body #main #main-body .main-body-header .list-action-container .main-body-search input {
   font-size: 13px;
 }
 

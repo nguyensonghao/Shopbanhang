@@ -33,6 +33,6 @@ Route::prefix('admin')->group(function () {
         Route::post('/edit', 'Admin\Category_Product_Controller@edit_action');
         Route::post('/add', 'Admin\Category_Product_Controller@add_action');
         Route::get('/search', 'Admin\Category_Product_Controller@search');
-        Route::delete('/delete/:id', 'Admin\Category_Product_Controller@delete_action');
+        Route::get('/delete/{id}', 'Admin\Category_Product_Controller@delete_action');
     });
 });

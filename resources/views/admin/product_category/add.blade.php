@@ -4,7 +4,11 @@
 
 @section('content')
     <p class="tile">Thêm category</p>
-    <form class="admin-form" id="form-add-product-category" method="post" action="{{ url ('admin/category/add') }}">
+    <form
+        class="admin-form" id="form-add-product-category"
+        enctype="multipart/form-data" method="post"
+        action="{{ url ('admin/category/add') }}"
+    >
         {{ csrf_field() }}
         <div class="form-group">
             <label for="category-name">Tên</label>
@@ -46,7 +50,7 @@
             <label for="category-description">Mô tả</label>
             <textarea
                 class="form-control" id="category-description"
-                name="description" placeholder="Nhập mô tả" rows="5"
+                name="category-description" placeholder="Nhập mô tả" rows="5"
             ></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-sm">Thêm mới</button>
